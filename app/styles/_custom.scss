@@ -1,147 +1,214 @@
 html,
-body {
+body
+{
     position: relative;
+
     min-width: 100%;
     min-height: 100%;
 }
-body {
+body
+{
     background-color: $body-bg;
-    > .row {
+    > .row
+    {
         margin: 0;
     }
 }
-#stickyHeader {
+#stickyHeader
+{
     display: block;
     overflow: hidden;
+
     background-color: transparent;
 }
-#heading {
-    font-family: "Lato";
-    font-style: italic;
-    text-align: center;
+#heading
+{
+    font-family: 'Lato';
     font-size: 2em;
+    font-style: italic;
+
     padding: 0;
+
     cursor: pointer;
-    &.active {
-        color: $link-color-hover;
+    text-align: center;
+    &:hover
+    {
+        color: $btn-positive-bg;
+        #picture
+        {
+            filter: none;
+        }
     }
-    #picture {
+    &.active
+    {
+        color: $link-color-hover;
+        #picture
+        {
+            filter: none;
+        }
+    }
+    #picture
+    {
         display: inline-block;
-        width: 100px;
-        height: 100px;
+        transition: all .3s;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         filter: grayscale(100%);
-
     }
-    span {
-        transition: all .3s;
+    span
+    {
         display: block;
+
+        transition: all .3s;
     }
 }
-#mainNav {
+#mainNav
+{
+    z-index: 100;
+
+    padding: 1em;
+
     transition: all .2s ease-in;
     text-align: center;
-    padding: 1em;
-    z-index: 100;
 }
-footer {
+footer
+{
     position: fixed;
+    z-index: 1000;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    z-index: 1000;
+
     background-color: darken($body-bg, 85%);
-    .btn-cnt {
-        padding: 1em;
+    .btn-cnt
+    {
         margin: 0;
+        padding: 1em;
     }
-    .flat.btn {
-        color: #FFFFFF;
+    .flat.btn
+    {
+        color: #fff;
     }
-    small {
-        color: #FFFFFF;
+    small
+    {
         padding: 0 $baseline;
+
+        color: #fff;
     }
 }
 
-.animations {
-    .btn {
+.animations
+{
+    .btn
+    {
         width: 100%;
     }
 }
-section .container {
+section .container
+{
     padding: 2em 0;
 }
-.heading {
-    margin-top: 0;
+.heading
+{
     position: relative;
+
+    margin-top: 0;
 }
-#sidebar {
+#sidebar
+{
     background-color: $sidebar-bg;
 }
-#main {
+#main
+{
+    position: relative;
+
     overflow: hidden;
     overflow-y: auto;
-    position: relative;
 }
-#mainNav {
+#mainNav
+{
     padding-bottom: 1em;
-    .btn {
-        margin-bottom: $baseline/2;
-        font-family: "Lato";
+    .btn
+    {
+        font-family: 'Lato';
         font-style: italic;
+
+        margin-bottom: $baseline/2;
+
         letter-spacing: 3px;
     }
 }
-.mainTitle {
-    font-family: "Lato";
+.mainTitle
+{
+    font-family: 'Lato';
     font-style: italic;
 }
-.animation {
-    padding-bottom: 3em;
-    background-color: $body-bg;
+.animation
+{
     position: relative;
+
+    padding-bottom: 3em;
+
+    background-color: $body-bg;
 }
 .animation.ng-enter,
-.animation.ng-leave {
+.animation.ng-leave
+{
     height: 100%;
+    position: absolute;
     animation-duration: 1s;
 }
-.animation.ng-enter {
-    animation-name: fadeIn;
+.animation.ng-enter
+{
     z-index: 99;
+    animation-name: fadeInLeft;
 }
-.animation.ng-leave {
-    animation-name: fadeOut;
+.animation.ng-leave
+{
     z-index: 88;
+
+    animation-name: fadeOutRight;
 }
 
 
 /* shrink the gutter if the screen is smaller than 1024px wide */
-@media screen and (min-width : 1024px) {
+@media screen and (min-width : 1024px)
+{
 }
 /* Set columns to 100% if the screen is small than 768px wide */
-@media screen and (max-width : 768px) {
-    #heading {
+@media screen and (max-width : 768px)
+{
+    #heading
+    {
         text-align: center;
-        #picture {
+        #picture
+        {
             display: inline-block;
+
             width: 75px;
             height: 75px;
+
             vertical-align: middle;
         }
-        span {
-            display: inline-block;
+        span
+        {
             line-height: 50px;
+
+            display: inline-block;
+
             vertical-align: middle;
         }
     }
 }
-@media screen and (min-width : 768px) {
+@media screen and (min-width : 768px)
+{
     #main,
-    #sidebar {
+    #sidebar
+    {
         height: 100%;
     }
-    #mainNav {
+    #mainNav
+    {
     }
 }
