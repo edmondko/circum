@@ -3,7 +3,7 @@ $columns-count: 12;
 $gutter: 1em;
 /* basic Styles */
 $body-bg: #263238;
-$sidebar-bg: rgba(0,0,0,0.2);
+$sidebar-bg: darken($body-bg, 20%);
 $section-bg: rgba(0,0,0,0.3);
 
 /* Typography Variables */
@@ -16,9 +16,9 @@ $light-text: lighten($text-color, 20%);
 $baseline: 1.5em;
 
 $font-family: "Roboto", Helvetica, "Helvetica Neue", Arial;
-// $heading-font: "Roboto Slab";
+$heading-font: "Roboto Slab";
 // $heading-font: "Lobster Two";
-$heading-font: "Droid Serif";
+// $heading-font: "Droid Serif";
 $h1-size : 3.157em;
 $h2-size : 2.369em;
 $h3-size : 1.777em;

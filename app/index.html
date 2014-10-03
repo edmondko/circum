@@ -27,12 +27,13 @@
         <div resize ng-style="style()">
             <aside class="col-4" id="sidebar">
                 <header id="stickyHeader">
-                    <h1 id="heading" class="animated fadeInDown">
-                        <a ui-sref="home">Edmond Ko</a>
+                    <h1 id="heading" ui-sref="about" ui-sref-active="active" class="animated fadeInDown">
+                        <img src="images/self-portrait.jpg" alt="Edmond Ko Portrait" id="picture" >
+                        <span>Edmond Ko</span>
                     </h1>
                 </header>
                 <nav id="mainNav" class="btn-cnt cf">
-                    <a class="btn flat full" ui-sref="about" ui-sref-active="active">About</a>
+                    <!-- <a class="btn flat full" ui-sref="about" ui-sref-active="active">About</a> -->
                     <a class="btn flat full positive" ui-sref="work" ui-sref-active="active">Work</a>
                     <a class="btn flat full neutral" ui-sref="education" ui-sref-active="active">Education</a>
                     <a class="btn flat full negative" ui-sref="skills" ui-sref-active="active">Skills</a>
