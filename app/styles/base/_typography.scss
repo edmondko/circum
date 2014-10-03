@@ -84,7 +84,8 @@ blockquote {
 }
 blockquote {
 	display: block;
-	background-color: rgba(0,0,0,.03);
+	background-color: rgba(0,0,0,.2);
+	color: darken($text-color, 15%);
 	padding: 1.5em 1.5em 1.5em 2em;
 	margin: 0 0 $baseline;
 	position: relative;
