@@ -1,0 +1,108 @@
+html,body {
+	position: relative;
+	min-width: 100%;
+	min-height: 100%;
+}
+body {
+    background-color: $body-bg;
+    > .row {margin: 0;}
+}
+#stickyHeader {
+    display: block;
+    overflow: hidden;
+    background-color: transparent;
+}
+#heading {
+    text-align: center;
+    font-family: "Lobster";
+    font-size: 4em;
+    margin: 0 0 .3em;
+    padding: 0;
+}
+#mainNav {
+    transition: all .2s ease-in;
+    text-align: center;
+    padding: 1em;
+    z-index: 100;
+}
+footer {
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ z-index: 1000;
+ background-color: rgba(0, 0, 0, .85);
+    .btn-cnt {
+        padding: 1em;
+        margin: 0;
+    }
+    .flat.btn {
+        color: #FFFFFF;
+    }
+    small {
+        color: #FFFFFF;
+        padding: 0 $baseline;
+    }
+}
+
+.animations {
+    .btn {
+        width: 100%;
+    }
+}
+section .container {
+    padding: 2em 0;
+}
+.heading {
+    margin-top: 0;
+    position: relative;
+}
+#sidebar {
+    background-color: $sidebar-bg;
+}
+#main {
+    overflow: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+#mainNav {
+    padding-bottom: 1em;
+    > .full { width: 50%; float: left; }
+
+}
+.animation {
+    padding-bottom: 3em;
+}
+.animation.ng-enter, .animation.ng-leave {
+    position: absolute;
+    width: 100%;
+    animation-duration: 1s;
+}
+.animation.ng-enter {
+
+    animation-name: fadeInLeft;
+    z-index: 99;
+}
+.animation.ng-leave {
+    animation-name: fadeOutRight;
+    z-index: 88;
+}
+
+
+/* shrink the gutter if the screen is smaller than 1024px wide */
+@media screen and (min-width : 1024px) {
+}
+/* Set columns to 100% if the screen is small than 768px wide */
+@media screen and (min-width : 768px) {
+    #main,
+    #sidebar {
+        height: 100%;
+    }
+    #mainNav {
+
+        > .full {
+        width: 100%; float: none;
+        }
+    }
+
+}
