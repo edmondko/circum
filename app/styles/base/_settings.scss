@@ -2,18 +2,23 @@
 $columns-count: 12;
 $gutter: 1em;
 /* basic Styles */
-$body-bg: #232323;
-$sidebar-bg: rgba(0,0,0,0.1);
+$body-bg: #263238;
+$sidebar-bg: rgba(0,0,0,0.2);
 $section-bg: rgba(0,0,0,0.3);
+
 /* Typography Variables */
-$text-color: #EFEFEF;
-$link-color: #0288d1;
+$text-color: #eceff1;
+$link-color: #29b6f6;
+$link-color-hover: #03a9f4;
 $hr-color: #CCCCCC;
 $light-text: lighten($text-color, 20%);
 
 $baseline: 1.5em;
 
 $font-family: "Roboto", Helvetica, "Helvetica Neue", Arial;
+// $heading-font: "Roboto Slab";
+// $heading-font: "Lobster Two";
+$heading-font: "Droid Serif";
 $h1-size : 3.157em;
 $h2-size : 2.369em;
 $h3-size : 1.777em;
@@ -27,14 +32,16 @@ $btn-roundness: 3px;
 $btn-small-fz: .75em;
 $btn-large-fz: 2em;
 
-$btn-default-bg: #0277bd;
+$btn-default-bg: #0288d1;
 $btn-default-text-color: #FFF;
-$btn-positive-bg: #259b24;
+$btn-positive-bg: #42bd41;
 $btn-positive-text-color: #FFF;
 $btn-neutral-bg: #ffc107;
 $btn-neutral-text-color: #FFF;
 $btn-negative-bg: #c41411;
 $btn-negative-text-color: #FFF;
+$btn-flat-bg: rgba(255,255,255,.1);
+$btn-flat-bg-hover: rgba(255,255,255,.2);
 
 /* Form Variables */
 $field-border-color: #CCCCCC;
@@ -54,3 +61,6 @@ $error-color: #e84e40;
 $warning-color: #ffca28;
 $success-color: #42bd41 ;
 
+/* Timeline settings */
+$timeline-bg: #546e7a;
+$timeline-bg2: #37474f;

@@ -1,0 +1,156 @@
+.cbp_tmtimeline {
+    margin: 30px 0 0 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+
+	/* The line */
+	&:before {
+	    content: '';
+	    position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    width: 10px;
+	    background: $timeline-bg2;
+	    left: 20%;
+	    margin-left: -10px;
+	}
+	> li {
+		position: relative;
+	}
+}
+
+
+/* The date/time */
+.cbp_tmtimeline > li .cbp_tmtime {
+    display: block;
+    width: 25%;
+    padding-right: 100px;
+    position: absolute;
+	span {
+	    display: block;
+	    text-align: right;
+	    &:first-child {
+	        font-size: 1em;
+	        color: $text-color;
+	    }
+	    &:last-child {
+	        font-size: 1em;
+	        color: $link-color;
+	    }
+	    &.arrow {
+	    	content: "&f061;"
+	    }
+	}
+}
+
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
+    color: #6cbfee;
+}
+
+/* Right content */
+.cbp_tmtimeline > li .cbp_tmlabel {
+
+    margin: 0 0 15px 28%;
+    background: $timeline-bg;
+    color: #fff;
+    padding: $baseline;
+    position: relative;
+    border-radius: 5px;
+
+    &:after {
+        right: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-right-color: $timeline-bg;
+        border-width: 10px;
+        top: 10px;
+    }
+    h3 {
+    	margin-top: 0;
+    }
+    strong { color: darken($text-color, 20%);}
+}
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
+    background: $timeline-bg2;
+    &:after {
+	    border-right-color: $timeline-bg2;
+	}
+}
+
+
+
+/* The triangle */
+
+
+
+
+/* The icons */
+.cbp_tmtimeline > li .cbp_tmicon {
+    width: 40px;
+    height: 40px;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-size: 2em;
+    line-height: 40px;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    color: $text-color;
+    background: $timeline-bg;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px $timeline-bg2;
+    text-align: center;
+    left: 20%;
+    top: 0;
+    margin: 0 0 0 -25px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+    .cbp_tmtimeline:before {
+        display: none;
+    }
+    .cbp_tmtimeline > li .cbp_tmtime {
+        width: 100%;
+        position: relative;
+        padding: 0 0 20px 0;
+    }
+    .cbp_tmtimeline > li .cbp_tmtime span {
+        text-align: left;
+        display: inline-block;
+    }
+    .cbp_tmtimeline > li .cbp_tmlabel {
+        margin: 0 0 30px 0;
+        padding: 1em;
+        font-weight: 400;
+        font-size: 95%;
+    }
+    .cbp_tmtimeline > li .cbp_tmlabel:after {
+        right: auto;
+        left: 20px;
+        border-right-color: transparent;
+        border-bottom-color: $timeline-bg;
+        top: -20px;
+    }
+    .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
+        border-right-color: transparent;
+        border-bottom-color: $timeline-bg2;
+
+    }
+    .cbp_tmtimeline > li .cbp_tmicon {
+        position: relative;
+        float: right;
+        left: auto;
+        margin: -55px 5px 0 0px;
+    }
+}

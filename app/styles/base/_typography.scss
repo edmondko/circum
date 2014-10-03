@@ -18,10 +18,11 @@ p {
 }
 a,
 a:visited {
-	color: $btn-default-bg;
+	color: $link-color;
 	text-decoration: none;
 	&:hover {
-		color: $link-color;
+		cursor: pointer;
+		color: $link-color-hover;
 	}
 }
 hr {
@@ -37,6 +38,8 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: $heading-font;
+	font-weight: normal;
 	line-height: $baseline;
 	margin: $baseline/3 0;
 }
@@ -47,7 +50,6 @@ h6 {
 }
 
 h1 {
-	// font-family: Lobster;
 	font-size: $h1-size;
 }
 h2 {

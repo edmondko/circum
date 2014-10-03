@@ -1,11 +1,14 @@
-html,body {
-	position: relative;
-	min-width: 100%;
-	min-height: 100%;
+html,
+body {
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
 }
 body {
     background-color: $body-bg;
-    > .row {margin: 0;}
+    > .row {
+        margin: 0;
+    }
 }
 #stickyHeader {
     display: block;
@@ -13,10 +16,9 @@ body {
     background-color: transparent;
 }
 #heading {
+    font-family: "Lobster Two";
     text-align: center;
-    font-family: "Lobster";
-    font-size: 4em;
-    margin: 0 0 .3em;
+    font-size: 2em;
     padding: 0;
 }
 #mainNav {
@@ -26,12 +28,12 @@ body {
     z-index: 100;
 }
 footer {
- position: fixed;
- bottom: 0;
- left: 0;
- right: 0;
- z-index: 1000;
- background-color: rgba(0, 0, 0, .85);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, .85);
     .btn-cnt {
         padding: 1em;
         margin: 0;
@@ -67,24 +69,31 @@ section .container {
 }
 #mainNav {
     padding-bottom: 1em;
-    > .full { width: 50%; float: left; }
-
+    > .full {
+        width: 50%;
+        float: left;
+    }
+    .btn { margin-bottom: $baseline/2;}
+}
+.mainTitle {
+    font-family: "Lobster Two";
 }
 .animation {
     padding-bottom: 3em;
+    background-color: $body-bg;
+    position: relative;
 }
-.animation.ng-enter, .animation.ng-leave {
-    position: absolute;
-    width: 100%;
+.animation.ng-enter,
+.animation.ng-leave {
+    height: 100%;
     animation-duration: 1s;
 }
 .animation.ng-enter {
-
-    animation-name: fadeInLeft;
+    animation-name: fadeIn;
     z-index: 99;
 }
 .animation.ng-leave {
-    animation-name: fadeOutRight;
+    animation-name: fadeOut;
     z-index: 88;
 }
 
@@ -99,10 +108,9 @@ section .container {
         height: 100%;
     }
     #mainNav {
-
         > .full {
-        width: 100%; float: none;
+            width: 100%;
+            float: none;
         }
     }
-
 }
