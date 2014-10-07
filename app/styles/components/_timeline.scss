@@ -31,12 +31,10 @@
 	    display: block;
 	    text-align: right;
 	    &:first-child {
-	        font-size: 1em;
-	        color: $text-color;
-	    }
-	    &:last-child {
-	        font-size: 1em;
 	        color: $link-color;
+        }
+        &:last-child {
+            color: $text-color;
 	    }
 	    &.arrow {
 	    	content: "&f061;"
@@ -44,16 +42,11 @@
 	}
 }
 
-
-.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
-    color: $link-color;
-}
-
 /* Right content */
 .cbp_tmtimeline > li .cbp_tmlabel {
     margin: 0 0 15px 28%;
     background: $timeline-bg;
-    color: #fff;
+    color: $text-color;
     padding: $baseline;
     position: relative;
     border-radius: 5px;

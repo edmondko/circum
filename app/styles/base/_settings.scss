@@ -19,7 +19,7 @@ $font-family: "Roboto", Helvetica, "Helvetica Neue", Arial;
 $heading-font: "Roboto Slab";
 // $heading-font: "Lobster Two";
 // $heading-font: "Droid Serif";
-$h1-size : 3.157em;
+$h1-size : 2.8em;
 $h2-size : 2.369em;
 $h3-size : 1.777em;
 $h4-size : 1em;
@@ -64,3 +64,7 @@ $success-color: #42bd41 ;
 /* Timeline settings */
 $timeline-bg: lighten($body-bg, 10%);
 $timeline-bg2: lighten($body-bg, 15%);
+
+/* Fade Animations */
+$animationIn: fadeIn;
+$animationOut: fadeOut;
