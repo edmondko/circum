@@ -1,8 +1,0 @@
-# Unignore everything
-!**/*
-
-# Re-ignore things
-node_modules
-.tmp
-.sass-cache
-bower_components
