@@ -65,9 +65,13 @@ body
     transition: all .2s ease-in;
     text-align: center;
 }
-footer
+#mainFooter
 {
     // background-color: darken($body-bg, 85%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     .btn-cnt
     {
         margin: 0;
@@ -103,7 +107,7 @@ section .container
     margin-top: 0;
 }
 #sidebar
-{
+{   position: relative;
     overflow-x: hidden;
     overflow-y: auto;
     background-color: $sidebar-bg;
@@ -136,9 +140,6 @@ section .container
 .animation
 {
     position: relative;
-
-    padding-bottom: 3em;
-
     background-color: $body-bg;
 }
 .animation.ng-enter,
@@ -188,6 +189,9 @@ section .container
 
             vertical-align: middle;
         }
+    }
+    #mainFooter {
+        display: none;
     }
 }
 @media screen and (min-width : 768px)

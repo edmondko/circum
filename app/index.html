@@ -34,13 +34,10 @@
                 </header>
                 <nav id="mainNav" class="btn-cnt cf">
                     <!-- <a class="btn flat full" ui-sref="about" ui-sref-active="active">About</a> -->
-                    <a class="btn flat full neutral" ui-sref="work" ui-sref-active="active">Work</a>
+                    <a class="btn flat full positive" ui-sref="work" ui-sref-active="active">Work</a>
                     <a class="btn flat full positive" ui-sref="skills" ui-sref-active="active">Skills</a>
-                    <a class="btn flat full" ui-sref="education" ui-sref-active="active">Education</a>
+                    <a class="btn flat full positive" ui-sref="education" ui-sref-active="active">Education</a>
                 </nav>
-            </aside>
-            <div id="main" class="col-9">
-                <div ui-view class="animation"></div>
                 <footer id="mainFooter">
                     <p class="btn-cnt center">
                         <small>
@@ -48,6 +45,10 @@
                         </small>
                     </p>
                 </footer>
+            </aside>
+            <div id="main" class="col-9">
+                <div ui-view class="animation"></div>
+
             </div>
         </div>
     </div>

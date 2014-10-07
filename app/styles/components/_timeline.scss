@@ -46,12 +46,11 @@
 
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
-    color: #6cbfee;
+    color: $link-color;
 }
 
 /* Right content */
 .cbp_tmtimeline > li .cbp_tmlabel {
-
     margin: 0 0 15px 28%;
     background: $timeline-bg;
     color: #fff;
