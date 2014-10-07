@@ -31,26 +31,19 @@ body
 
     cursor: pointer;
     text-align: center;
+    &.active,
     &:hover
     {
         color: $btn-positive-bg;
         #picture
         {
-            filter: none;
-        }
-    }
-    &.active
-    {
-        color: $link-color-hover;
-        #picture
-        {
-            filter: none;
+            filter: none !important;
         }
     }
     #picture
     {
         display: inline-block;
-        transition: all .3s;
+        transition: all 0.5s ease-out;
         width: 150px;
         height: 150px;
         border-radius: 50%;
@@ -74,13 +67,7 @@ body
 }
 footer
 {
-    position: fixed;
-    z-index: 1000;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    background-color: darken($body-bg, 85%);
+    // background-color: darken($body-bg, 85%);
     .btn-cnt
     {
         margin: 0;
@@ -117,6 +104,8 @@ section .container
 }
 #sidebar
 {
+    overflow-x: hidden;
+    overflow-y: auto;
     background-color: $sidebar-bg;
 }
 #main

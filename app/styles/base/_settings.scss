@@ -2,7 +2,7 @@
 $columns-count: 12;
 $gutter: 1em;
 /* basic Styles */
-$body-bg: #263238;
+$body-bg: #212121;
 $sidebar-bg: darken($body-bg, 20%);
 $section-bg: rgba(0,0,0,0.3);
 
@@ -38,7 +38,7 @@ $btn-positive-bg: #42bd41;
 $btn-positive-text-color: #FFF;
 $btn-neutral-bg: #ffc107;
 $btn-neutral-text-color: #FFF;
-$btn-negative-bg: #c41411;
+$btn-negative-bg: #e84e40;
 $btn-negative-text-color: #FFF;
 $btn-flat-bg: rgba(255,255,255,.1);
 $btn-flat-bg-hover: rgba(255,255,255,.2);
@@ -62,5 +62,5 @@ $warning-color: #ffca28;
 $success-color: #42bd41 ;
 
 /* Timeline settings */
-$timeline-bg: #546e7a;
-$timeline-bg2: #37474f;
+$timeline-bg: lighten($body-bg, 10%);
+$timeline-bg2: lighten($body-bg, 15%);
