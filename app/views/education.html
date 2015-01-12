@@ -3,41 +3,23 @@
         <div class="row">
             <div class="col-12">
                 <h1 class="mainTitle">Education and Degrees</h1>
-                <blockquote>I believe in <strong>self education</strong> rather than University institutions which teach people to think like robots.</blockquote>
+                <!-- <blockquote>I believe in <strong>self education</strong></blockquote> -->
                 <ul class="cbp_tmtimeline">
-                    <li>
+                    <li ng-repeat="edu in education">
                         <time class="cbp_tmtime">
-                            <span>Today</span>
-                            <span>October 2009</span>
+                             <span>{{edu.to}}</span>
+                            <span>{{edu.from}}</span>
                         </time>
                         <div class="cbp_tmicon fa fa-graduation-cap"></div>
                         <div class="cbp_tmlabel">
-                            <h3>Information Technologies &amp; Telecommunications</h3>
-                            <h4>Bachelor's degree</h4>
-                            <p>I'm doing a Minor Program in Information Technologies alongside my major program Telecommunications.
-                                <p>
-                                    <strong>University :</strong> New Bulgarian University</p>
-                                <p>
-                                    <strong>Location :</strong> Sofia</p>
+                            <h3>{{edu.title}}</h3>
+                            <h4>{{edu.degree}}</h4>
+                            <p>{{edu.about}}<p>
+                            <strong>University :</strong> {{edu.school}}</p>
+                            <p><strong>Location :</strong> {{edu.location}}</p>
                         </div>
                     </li>
-                    <li>
-                        <time class="cbp_tmtime">
-                            <div>
-                                <span>June 2009</span>
-                                <span>September 2004 - </span>
-                            </div>
-                        </time>
-                        <div class="cbp_tmicon fa fa-university"></div>
-                        <div class="cbp_tmlabel">
-                            <h3>Laser Technologies</h3>
-                            <h4>Highschool Proffesional Degree</h4>
-                            <p>
-                                <strong>School : </strong> NPGPTO M.V.Lomonosov</p>
-                            <p>
-                                <strong>Location : </strong> Sofia</p>
-                        </div>
-                    </li>
+
                 </ul>
             </div>
         </div>

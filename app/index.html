@@ -23,20 +23,20 @@
         <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="row" id="wrapper">
+    <div class="row" id="wrapper" ng-controller="MainCtrl">
 
             <aside class="col-3" id="sidebar">
                 <header id="stickyHeader">
                     <h1 id="heading" ui-sref="about" ui-sref-active="active">
-                        <img src="images/self-portrait.jpg" alt="Edmond Ko Portrait" id="picture"  class="animated flipInY">
+                        <div id="picture">
+                        <div class="front"><img src="images/logo.jpg" alt="Edmond Ko Logo"></div>
+                        <div class="back"><img src="images/self-portrait.jpg" alt="Edmond Ko Portrait"></div>
+                        </div>
                         <span>Edmond Ko</span>
                     </h1>
                 </header>
                 <nav id="mainNav" class="btn-cnt cf">
-                    <!-- <a class="btn flat full" ui-sref="about" ui-sref-active="active">About</a> -->
-                    <a class="btn flat full positive" ui-sref="work" ui-sref-active="active">Work</a>
-                    <a class="btn flat full positive" ui-sref="skills" ui-sref-active="active">Skills</a>
-                    <a class="btn flat full positive" ui-sref="education" ui-sref-active="active">Education</a>
+                    <a ng-repeat="item in navigation" class="btn flat full positive" ui-sref="{{item}}" ui-sref-active="active">{{item}}</a>
                 </nav>
                 <footer id="mainFooter">
                     <p class="btn-cnt center">
@@ -47,7 +47,6 @@
                 </footer>
             </aside>
             <div id="main" class="col-9">
-
                 <div ui-view class="animation">
                 </div>
                 <div class="contener_general" id="loader">
