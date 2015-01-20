@@ -24,7 +24,6 @@
 
 	<!-- Add your site or application content here -->
 	<div class="row" id="wrapper" ng-controller="MainCtrl">
-
 		<aside class="col-3" id="sidebar">
 			<header id="stickyHeader">
 				<h1 id="heading" ui-sref="about" ui-sref-active="active">
@@ -38,13 +37,6 @@
 			<nav id="mainNav" class="btn-cnt cf">
 				<a ng-repeat="item in navigation" class="btn flat full positive" ui-sref="{{item}}" ui-sref-active="active">{{item}}</a>
 			</nav>
-			<footer id="mainFooter">
-				<p class="btn-cnt center">
-					<small>
-						Developed by <a href="http://github.com/edmondko">Edmond Ko</a>
-					</small>
-				</p>
-			</footer>
 		</aside>
 		<div id="main" class="col-9">
 			<div ui-view class="animation">
