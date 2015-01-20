@@ -190,7 +190,7 @@ section .container {
         top: 100%;
         left: 0;
         display: none;
-        animation-duration: 1s;
+        animation-duration: 0.5s;
         &.opened {
             animation-name: fadeInDown;
             transform-origin: 0 50%;
