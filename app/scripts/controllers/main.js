@@ -12,7 +12,7 @@ angular.module('cvApp')
         $scope.pageTitle = 'Edmond Ko\'s Interactive CV!';
         $scope.navigation = ['work', 'skills', 'education'];
 
-        $http.get('../../../data.json').
+        $http.get('../data.json').
         success(function (response) {
             $scope.jobs = response.jobs;
             $scope.education = response.education;
