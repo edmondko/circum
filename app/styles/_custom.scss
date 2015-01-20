@@ -30,6 +30,7 @@ body {
     cursor: pointer;
     text-align: center;
     perspective: 1000;
+    user-select: none;
     &.active,
     &:hover {
         color: $btn-positive-bg;
@@ -151,6 +152,12 @@ section .container {
 @media screen and (min-width : 1024px) {
 }
 /* Set columns to 100% if the screen is small than 768px wide */
+@media screen and (max-width : 400px) {
+    #stickyHeader,
+    #mainNav {
+        width: 100%; float: none;
+    }
+}
 @media screen and (max-width : 768px) {
     #heading {
         text-align: center;
@@ -166,6 +173,11 @@ section .container {
             vertical-align: middle;
         }
     }
+    #stickyHeader,
+    #mainNav {
+        width: 50%; float: left;
+        .btn { text-align: left !important;}
+    }
     #mainFooter {
         display: none;
     }
@@ -175,8 +187,7 @@ section .container {
     #sidebar {
         height: 100%;
     }
-    #mainNav {
-    }
+
     .animation {
         height: 100%;
         margin-top: 0;
