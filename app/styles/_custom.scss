@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
     position: relative;
     min-width: 100%;
     min-height: 100%;
@@ -31,12 +30,11 @@ body {
     text-align: center;
     perspective: 1000;
     user-select: none;
-    &.active,
-    &:hover {
+    &.active, &:hover {
         color: $btn-positive-bg;
         #picture {
             transform: rotateY(-180deg);
-           /*  img {
+            /*  img {
                filter: none !important;
            } */
         }
@@ -109,7 +107,6 @@ body {
     z-index: 1000;
     display: none;
 }
-
 .animations {
     .btn {
         width: 100%;
@@ -142,30 +139,19 @@ section .container {
         letter-spacing: 3px;
     }
 }
+#toggleNav {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+
+}
 .mainTitle {
     font-family: "Lato";
     font-style: italic;
 }
-
-
-
-
-
-/* Set columns to 100% if the screen is small than 768px wide */
-@media screen and (max-width : 400px) {
-    #stickyHeader,
-    #mainNav {
-        width: 100%; float: none;
-    }
-}
-
-@media screen and (max-width : 768px) {
-    #sidebar {
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+@media screen and (max-width: 768px) {
     #heading {
         text-align: center;
         #picture {
@@ -180,19 +166,43 @@ section .container {
             vertical-align: middle;
         }
     }
-    #stickyHeader,
-    #mainNav {
-        width: 50%; float: left;
-        .btn { text-align: left !important;}
-    }
-    #mainFooter {
-        display: none;
+    #stickyHeader, #mainNav {
+        width: 50%;
+        float: left;
     }
 }
+/* Set columns to 100% if the screen is small than 768px wide */
 
-@media screen and (min-width : 768px) {
-    #main,
+@media screen and (max-width: 400px) {
+    #stickyHeader, #mainNav {
+        width: 100%;
+        float: none;
+    }
+    #mainNav {
+
+        display: none;
+        &.opened {
+            display: block;
+        }
+    }
+    #toggleNav {
+        display: block;
+    }
+}
+@media screen and (min-width: 401px) and (max-width: 768px) {
     #sidebar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #mainNav {
+        .btn {
+            text-align: left;
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    #main, #sidebar {
         height: 100%;
     }
     .animation {
@@ -203,19 +213,13 @@ section .container {
         margin-left: -$gutter;
     }
 }
-
-
-
-
-
 .animation {
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
     background-color: $body-bg;
 }
-.animation.ng-enter,
-.animation.ng-leave {
+.animation.ng-enter, .animation.ng-leave {
     height: 100%;
     // position: absolute;
     animation-duration: 1s;

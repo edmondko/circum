@@ -128,8 +128,8 @@ a.btn,
 		border-radius: 50%;
 		line-height: 50px;
 		padding: 0;
-		text-align: center;
-		.fa { margin-right: 0; line-height: 50px; font-size: 150%; font-weight: normal;}
+		text-align: center !important;
+		.fa { margin-right: 0; line-height: 50px; font-size: 150%; font-weight: normal; text-align: center; pointer-events: none;}
 	}
 	&.full {
 		width: 100%;

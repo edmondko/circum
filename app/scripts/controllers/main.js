@@ -12,17 +12,22 @@ angular.module('cvApp')
         $scope.pageTitle = 'Edmond Ko\'s Interactive CV!';
         $scope.navigation = ['work', 'skills', 'education'];
         /*load data from service*/
-        $scope.items = [];
+        $scope.navVisible = true;
 
         $scope.data = jsonService.query(function (response) {
+            /*Set data to scope*/
             $scope.skills = response.skills;
             $scope.education = response.education;
             $scope.jobs = response.jobs;
 
         });
 
+        $scope.navToggle = function(ev) {
+            var element = ev.srcElement ? ev.srcElement : ev.target;
+            ev.preventDefault();
+            $(element).siblings("#mainNav").toggleClass('opened');
+        }
 
-        /*Set data to scope*/
 
 
 
