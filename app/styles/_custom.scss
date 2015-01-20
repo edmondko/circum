@@ -155,6 +155,16 @@ section .container {
 	margin-top: -25px;
 	right: 20px;
 	z-index: 100;
+	animation-duration: 0.500s;
+	&.positive {
+		animation-name: flip;
+		animation-fill-mode: forwards;
+
+	}
+	&.negative {
+		animation-name: bounceIn;
+		animation-fill-mode: forwards;
+	}
 }
 .mainTitle {
 	font-family: "Lato";
