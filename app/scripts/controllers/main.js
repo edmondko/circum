@@ -25,11 +25,6 @@ angular.module('cvApp')
         $scope.navToggle = function(ev) {
             var element = ev.srcElement ? ev.srcElement : ev.target;
             ev.preventDefault();
-            $(element).siblings("#mainNav").toggleClass('opened');
-        }
-
-
-
-
-
+            $(element).siblings('#mainNav').toggleClass('opened');
+        };
     });

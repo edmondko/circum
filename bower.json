@@ -12,8 +12,7 @@
     "angular-touch": "1.2.16",
     "angular-route": "1.2.16",
     "angular-ui-router": "0.2.11",
-    "jquery": "latest",
-    "animate.css": "latest"
+    "jquery": "latest"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",
