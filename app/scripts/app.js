@@ -17,6 +17,7 @@ angular
         'ngSanitize',
         'ngTouch',
         'ui.router',
+        'jsonService'
     ])
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.when('', '/about').when('/', '/about').otherwise('404');

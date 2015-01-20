@@ -8,20 +8,23 @@
  * Controller of the cvApp
  */
 angular.module('cvApp')
-    .controller('MainCtrl', function($scope, $http) {
+    .controller('MainCtrl', function($scope, $http, jsonService) {
         $scope.pageTitle = 'Edmond Ko\'s Interactive CV!';
         $scope.navigation = ['work', 'skills', 'education'];
+        /*load data from service*/
+        $scope.items = [];
 
-        $http.get('../data.json').
-        success(function (response) {
-            $scope.jobs = response.jobs;
-            $scope.education = response.education;
+        $scope.data = jsonService.query(function (response) {
             $scope.skills = response.skills;
-            $scope.strings = response.strings;
-
-        }).
-        error(function (response) {
+            $scope.education = response.education;
+            $scope.jobs = response.jobs;
 
         });
+
+
+        /*Set data to scope*/
+
+
+
 
     });
