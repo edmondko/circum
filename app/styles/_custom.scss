@@ -164,13 +164,16 @@ section .container {
     font-family: "Lato";
     font-style: italic;
 }
+
+// Media queries
 @media screen and (max-width: 768px) {
     #heading {
+    	padding: 0.5em 0;
         text-align: center;
         #picture {
             display: inline-block;
-            width: 75px;
-            height: 75px;
+            width: 50px;
+            height: 50px;
             vertical-align: middle;
         }
         span {
@@ -179,31 +182,22 @@ section .container {
             vertical-align: middle;
         }
     }
-    #stickyHeader, #mainNav {
-        width: 50%;
-        float: left;
-    }
-}
-/* Set columns to 100% if the screen is small than 768px wide */
-
-@media screen and (max-width: 768px) {
-    #heading {
-        padding: 0.5em 0;
-    }
     #sidebar {
         overflow: visible !important;
         z-index: 10;
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
     }
-    #stickyHeader, #mainNav {
+    #mainNav,
+    #stickyHeader {
         width: 100%;
-        float: none;
     }
     #main {
-        padding-top: 150px;
+        padding-top: 120px;
     }
+
+    // Responsive Navigation
     #mainNav {
         display: flex;
         justify-content: space-between;
@@ -217,10 +211,7 @@ section .container {
         background-color: $sidebar-bg;
         opacity: 0;
         visibility: hidden;
-        transform: perspective(1000px) rotate3d(1, 0, 0, -120deg)
-        /* translateY(-100%) */
-
-        ;
+        transform: perspective(1000px) rotate3d(1, 0, 0, -120deg);
         transition-property: opacity, transform, visibility;
         transition-duration: 300ms, 300ms, 0;
         transform-origin: 50% 0;
@@ -257,7 +248,7 @@ section .container {
     #main, #sidebar {
         height: 100%;
     }
-    .animation {
+    .pageAnimation {
         height: 100%;
         margin-top: 0;
         margin-right: -$gutter;
@@ -270,23 +261,25 @@ section .container {
         }
     }
 }
-.animation {
+.pageAnimation {
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
     background-color: $body-bg;
     z-index: 0;
+
+	&.ng-enter, &.ng-leave {
+	    height: 100%;
+	    // position: absolute;
+	    animation-duration: 1s;
+	}
+	&.ng-enter {
+	    z-index: 9;
+	    animation-name: $animationIn;
+	    & + #loader {
+	        display: block;
+	    }
+	}
+
+	&.ng-leave { display: none; }
 }
-.animation.ng-enter, .animation.ng-leave {
-    height: 100%;
-    // position: absolute;
-    animation-duration: 1s;
-}
-.animation.ng-enter {
-    z-index: 9;
-    animation-name: $animationIn;
-    & + #loader {
-        display: block;
-    }
-}
-.animation.ng-leave { display: none; }
