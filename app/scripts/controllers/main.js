@@ -10,7 +10,7 @@
 angular.module('cvApp')
     .controller('MainCtrl', function($scope, $http, jsonService) {
         $scope.pageTitle = 'Edmond Ko\'s Interactive CV!';
-        $scope.navigation = ['work', 'skills', 'education'];
+        $scope.navigation = ['work', 'education', 'projects'];
         /*load data from service*/
         $scope.navVisible = true;
 
@@ -19,6 +19,7 @@ angular.module('cvApp')
             $scope.skills = response.skills;
             $scope.education = response.education;
             $scope.jobs = response.jobs;
+            $scope.strings = response.strings;
 
         });
 

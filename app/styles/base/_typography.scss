@@ -71,6 +71,7 @@ h6 {
 
 ul,
 ol {
+	padding: 0;
 	margin: 0 0 $baseline $baseline;
 }
 ul {
@@ -90,7 +91,7 @@ blockquote {
 	padding: 1.5em 1.5em 1.5em 2em;
 	margin: 0 0 $baseline;
 	position: relative;
-	border-radius: 3px;
+	border-radius: $btn-roundness;
 	box-shadow: inset 1px 1px 5px rgba(0,0,0,.1);
 	ul,
 	ol,

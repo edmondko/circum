@@ -38,9 +38,9 @@ angular
                 templateUrl: 'views/education.html',
                 controller: 'MainCtrl'
             })
-            .state('skills', {
-                url: '/skills',
-                templateUrl: 'views/skills.html',
+            .state('projects', {
+                url: '/projects',
+                templateUrl: 'views/projects.html',
                 controller: 'MainCtrl'
             })
 

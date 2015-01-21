@@ -1,7 +1,7 @@
 <section id="about" ng-controller="MainCtrl">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-8">
                 <h1 class="mainTitle">Work timeline</h1>
                 <ul class="cbp_tmtimeline">
                     <li ng-repeat="job in jobs">
@@ -26,6 +26,13 @@
                             </ul>
                         </div>
                     </li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h1 class="mainTitle">Skills</h1>
+                <blockquote ng-if="strings.skillsInfo">{{strings.skillsInfo}}</blockquote>
+                <ul>
+                    <li ng-repeat="skill in skills">{{skill}}</li>
                 </ul>
             </div>
         </div>

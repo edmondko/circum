@@ -1,290 +1,292 @@
 * {
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-html,
-body {
-	position: relative;
-	min-width: 100%;
-	min-height: 100%;
-
+html, body {
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
 }
 body {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: $body-bg;
-	height: 100%;
-	#wrapper {
-		margin: 0;
-		height: 100%;
-	}
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $body-bg;
+    height: 100%;
+    #wrapper {
+        margin: 0;
+        height: 100%;
+    }
 }
 #stickyHeader {
-	display: block;
-	overflow: hidden;
-	background-color: transparent;
+    display: block;
+    overflow: hidden;
+    background-color: transparent;
 }
 #heading {
-	font-family: "Lato";
-	font-size: 2em;
-	font-style: italic;
-	margin: 0;
-	padding: 1em 0;
-	cursor: pointer;
-	text-align: center;
-	perspective: 1000;
-	user-select: none;
-	background-color: $sidebar-bg;
-	&.active,
-	&:hover {
-		color: $btn-positive-bg;
-		#picture {
-			transform: rotateY(-180deg);
-			/*  img {
-               filter: none !important;
-           } */
-		}
-	}
-	#picture {
-		display: inline-block;
-		width: 150px;
-		height: 150px;
-		transition: .6s;
-		transform-style: preserve-3d;
-		position: relative;
-		.front,
-		.back {
-			width: 100%;
-			height: 100%;
-			backface-visibility: hidden;
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-		.front {
-			z-index: 2;
-			transform: rotateY(0deg);
-		}
-		.back {
-			transform: rotateY(-180deg);
-		}
-		img {
-			width: 100%;
-			height: 100%;
-			display: inline-block;
-			transition: all .5s ease-out;
-			border-radius: 50%;
-			// filter: grayscale(100%);
-		}
-	}
-	span {
-		display: block;
-		transition: all .3s;
-	}
+    font-family: "Lato";
+    font-size: 2em;
+    font-style: italic;
+    margin: 0;
+    padding: 1em 0;
+    cursor: pointer;
+    text-align: center;
+    perspective: 1000px;
+    user-select: none;
+    background-color: $sidebar-bg;
+    &.active, &:hover {
+        color: $btn-positive-bg;
+    }
+    &.active {
+        #picture {
+            transform: rotateY(-180deg);
+        }
+    }
+    #picture {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        transition: .6s;
+        transform-style: preserve-3d;
+        position: relative;
+        .front, .back {
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .front {
+            z-index: 2;
+            transform: rotateY(0deg);
+        }
+        .back {
+            transform: rotateY(-180deg);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            transition: all .5s ease-out;
+            border-radius: 50%;
+            // filter: grayscale(100%);
+        }
+    }
+    span {
+        display: block;
+        transition: all .3s;
+    }
 }
 #mainNav {
-	z-index: 100;
-	padding: 1em;
-	transition: all .2s ease-in;
-	text-align: center;
+    z-index: 100;
+    padding: 1em;
+    transition: all .2s ease-in;
+    text-align: center;
 }
 #mainFooter {
-	// background-color: darken($body-bg, 85%);
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	.btn-cnt {
-		margin: 0;
-		padding: 1em;
-	}
-	.flat.btn {
-		color: #FFFFFF;
-	}
-	small {
-		padding: 0 $baseline;
-		color: #FFFFFF;
-	}
+    // background-color: darken($body-bg, 85%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .btn-cnt {
+        margin: 0;
+        padding: 1em;
+    }
+    .flat.btn {
+        color: #FFFFFF;
+    }
+    small {
+        padding: 0 $baseline;
+        color: #FFFFFF;
+    }
 }
 #loader {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	margin-left: -30px;
-	z-index: 1000;
-	display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -30px;
+    z-index: 1000;
+    display: none;
 }
 .animations {
-	.btn {
-		width: 100%;
-	}
+    .btn {
+        width: 100%;
+    }
 }
 section .container {
-	padding: 2em 0;
+    padding: 2em 0;
 }
 .heading {
-	position: relative;
-	margin-top: 0;
+    position: relative;
+    margin-top: 0;
 }
 #sidebar {
-	transition: all .3s ease-out;
-	position: relative;
-	overflow-x: hidden;
-	overflow-y: auto;
-	background-color: $sidebar-bg;
+    transition: all .3s ease-out;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: $sidebar-bg;
 }
 #main {
-	position: relative;
-	overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 #mainNav {
-	padding-bottom: 1em;
-	.btn {
-		font-family: "Lato";
-		font-style: italic;
-		margin-bottom: $baseline/2;
-		letter-spacing: 3px;
-	}
+    padding-bottom: 1em;
+    .btn {
+        font-family: "Lato";
+        font-style: italic;
+        margin-bottom: $baseline/2;
+        letter-spacing: 3px;
+    }
 }
 #toggleNav {
-	display: none;
-	position: absolute;
-	top: 100%;
-	margin-top: -25px;
-	right: 20px;
-	z-index: 100;
-	animation-duration: 0.500s;
-	&.positive {
-		animation-name: flip;
-		animation-fill-mode: forwards;
-
-	}
-	&.negative {
-		animation-name: bounceIn;
-		animation-fill-mode: forwards;
-	}
+    display: none;
+    position: absolute;
+    top: 100%;
+    margin-top: -25px;
+    right: 20px;
+    z-index: 100;
+    animation-duration: 0.500s;
+    &.positive {
+        animation-name: flipInY;
+        animation-fill-mode: forwards;
+    }
+    &.negative {
+        animation-name: flipInX;
+        animation-fill-mode: forwards;
+    }
 }
 .mainTitle {
-	font-family: "Lato";
-	font-style: italic;
+    font-family: "Lato";
+    font-style: italic;
 }
 @media screen and (max-width: 768px) {
-	#heading {
-		text-align: center;
-		#picture {
-			display: inline-block;
-			width: 75px;
-			height: 75px;
-			vertical-align: middle;
-		}
-		span {
-			line-height: 50px;
-			display: inline-block;
-			vertical-align: middle;
-		}
-	}
-	#stickyHeader,
-	#mainNav {
-		width: 50%;
-		float: left;
-	}
+    #heading {
+        text-align: center;
+        #picture {
+            display: inline-block;
+            width: 75px;
+            height: 75px;
+            vertical-align: middle;
+        }
+        span {
+            line-height: 50px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    #stickyHeader, #mainNav {
+        width: 50%;
+        float: left;
+    }
 }
 /* Set columns to 100% if the screen is small than 768px wide */
 
-@media screen and (max-width: 400px) {
-	#sidebar {
-		overflow: visible !important;
-		z-index: 10;
-	}
-	#stickyHeader,
-	#mainNav {
-		width: 100%;
-		float: none;
-	}
-	#mainNav {
-		border-top: 1px solid $body-bg;
-		position: absolute;
-		top: 100%;
-		left: 0;
-		display: block;
-		z-index: 2;
-		background-color: $sidebar-bg;
-		opacity: 0; visibility: hidden;
-		transform:  translateY(-100%);
-		transition-property: opacity, transform, visibility;
-		transition-duration: 300ms, 300ms, 0;
-		transition-delay: 0, 0, 300ms;
-		transition-timing-function: ease-out, ease-out, ease-out;
-		&.opened {
-			opacity: 1;
-			visibility: visible;
-			transform:  translateY(0);
-			transition-property: opacity, transform, visibility;
-			transition-duration: 300ms, 300ms, 0;
-			transition-delay: 300ms, 300ms, 0;
-			transition-timing-function: ease-in, ease-in, ease-in;
-		}
-	}
+@media screen and (max-width: 768px) {
+    #heading {
+        padding: 0.5em 0;
+    }
+    #sidebar {
+        overflow: visible !important;
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    #stickyHeader, #mainNav {
+        width: 100%;
+        float: none;
+    }
+    #main {
+        padding-top: 150px;
+    }
+    #mainNav {
+        display: flex;
+        justify-content: space-between;
+        flex-align: center;
+        border-top: 1px solid $body-bg;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: block;
+        z-index: 2;
+        background-color: $sidebar-bg;
+        opacity: 0;
+        visibility: hidden;
+        transform: perspective(1000px) rotate3d(1, 0, 0, -120deg)
+        /* translateY(-100%) */
 
-	#stickyHeader {
-		z-index: 3;
-		position: relative;
-	}
-	#toggleNav {
-		display: block;
-	}
-}
-@media screen and (min-width: 401px) and (max-width: 768px) {
-	#sidebar {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	#mainNav {
-		.btn {
-			text-align: left;
-		}
-	}
+        ;
+        transition-property: opacity, transform, visibility;
+        transition-duration: 300ms, 300ms, 0;
+        transform-origin: 50% 0;
+        transition-delay: 0, 0, 300ms;
+        transition-timing-function: cubic-bezier(.35, .95, .99, 1.19), cubic-bezier(.35, .95, .99, 1.19), linear;
+        padding-bottom: 0;
+        &.opened {
+            opacity: 1;
+            box-shadow: 0 -3px 8px rgba(0, 0, 0, .2);
+            visibility: visible;
+            // transform-origin: 0 50%;
+            transform: perspective(1000px) rotate3d(1, 0, 0, 0deg)
+            /* translateY(0) */
+
+            ;
+            transition-property: opacity, transform, visibility;
+            transition-duration: 300ms, 300ms, 0;
+            transition-delay: 300ms, 300ms, 0;
+            transition-timing-function: cubic-bezier(.35, .95, .99, 1.19), cubic-bezier(.35, .95, .99, 1.19), linear;
+        }
+        .btn {
+            margin: 0 .5em 1em;
+        }
+    }
+    #stickyHeader {
+        z-index: 3;
+        position: relative;
+    }
+    #toggleNav {
+        display: block;
+    }
 }
 @media screen and (min-width: 768px) {
-	#main,
-	#sidebar {
-		height: 100%;
-	}
-	.animation {
-		height: 100%;
-		margin-top: 0;
-		margin-right: -$gutter;
-		margin-bottom: 0;
-		margin-left: -$gutter;
-	}
+    #main, #sidebar {
+        height: 100%;
+    }
+    .animation {
+        height: 100%;
+        margin-top: 0;
+        margin-right: -$gutter;
+        margin-bottom: 0;
+        margin-left: -$gutter;
+    }
+    #mainNav {
+        .btn {
+            width: 100%;
+        }
+    }
 }
 .animation {
-	overflow-x: hidden;
-	overflow-y: auto;
-	position: relative;
-	background-color: $body-bg;
-	z-index: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    background-color: $body-bg;
+    z-index: 0;
 }
-.animation.ng-enter,
-.animation.ng-leave {
-	height: 100%;
-	// position: absolute;
-	animation-duration: 1s;
+.animation.ng-enter, .animation.ng-leave {
+    height: 100%;
+    // position: absolute;
+    animation-duration: 1s;
 }
 .animation.ng-enter {
-	z-index: 9;
-	animation-name: $animationIn;
-	& + #loader {
-		display: block;
-	}
-}
-/* .animation.ng-leave {
-    z-index: 8;
-    animation-name: $animationOut;
+    z-index: 9;
+    animation-name: $animationIn;
     & + #loader {
-        display: none;
+        display: block;
     }
-} */
+}
+.animation.ng-leave { display: none; }
