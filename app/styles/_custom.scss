@@ -206,6 +206,7 @@ section .container {
         position: absolute;
         top: 0;
         left: 0;
+        transform: translateZ(0)
     }
     #mainNav,
     #stickyHeader {
@@ -229,7 +230,8 @@ section .container {
         background-color: $sidebar-bg;
         opacity: 0;
         visibility: hidden;
-        transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
+        // transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
+        transform: translateY(-100%);
         transition-property: opacity, transform, visibility;
         transition-duration: 300ms, 300ms, 0;
         transform-origin: 50% 0;
@@ -242,7 +244,8 @@ section .container {
             box-shadow: 0 -3px 8px rgba(0, 0, 0, .2);
             visibility: visible;
             // transform-origin: 0 50%;
-            transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
+            // transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
+            transform: translateY(0);
             transition-property: opacity, transform, visibility;
             transition-duration: 300ms, 300ms, 0;
             transition-delay: 300ms, 300ms, 0;
