@@ -30,11 +30,12 @@ body {
     position: relative;
     will-change: transform;
     &.rotatedY {
-        transform: rotateY(-180deg);
+        transform: rotateY(-180deg) translate3d(0,0,0);
     }
     .front, .back {
         width: 100%;
         height: 100%;
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         position: absolute;
         top: 0;
@@ -48,7 +49,7 @@ body {
         transform: rotateY(-180deg);
     }
     &.rotatedX {
-        transform: rotateX(-180deg);
+        transform: rotateX(-180deg) translate3d(0,0,0);
         .front {
             z-index: 2;
             transform: rotateX(0deg);
@@ -102,7 +103,6 @@ body {
 #mainNav {
     z-index: 100;
     padding: 1em;
-    transition: all .2s ease-in;
     text-align: center;
 }
 #mainFooter {
@@ -169,13 +169,14 @@ section .container {
     top: 100%;
     margin-top: -25px;
     right: 20px;
-    z-index: 100;
+    z-index: 101;
     width: 50px;
     height: 50px;
-
+    transform: translate3d(0,0,0);
     @extend .rotatingElem;
+
     &.opened {
-        transform: rotateY(-180deg)
+        transform: rotateY(-180deg) translate3d(0,0,0);
     }
 }
 .mainTitle {
@@ -202,10 +203,7 @@ section .container {
     }
     #sidebar {
         overflow: visible !important;
-        z-index: 10;
-        position: absolute;
-        top: 0;
-        left: 0;
+        z-index: 99;
         transform: translateZ(0)
     }
     #mainNav,
@@ -231,25 +229,26 @@ section .container {
         opacity: 0;
         visibility: hidden;
         // transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
-        transform: translateY(-100%);
+        will-change: opacity, transform, visibility;
+        transform: translate3d(0,-100%,0);
         transition-property: opacity, transform, visibility;
         transition-duration: 300ms, 300ms, 0;
         transform-origin: 50% 0;
         transition-delay: 0, 0, 300ms;
-        transition-timing-function: cubic-bezier(.35, .95, .99, 1.19), cubic-bezier(.35, .95, .99, 1.19), linear;
+        transition-timing-function: linear, ease-in-out, linear;
         padding-bottom: 0;
-        will-change: opacity, transform, visibility;
+        -webkit-backface-visibility: hidden;
         &.opened {
             opacity: 1;
             box-shadow: 0 -3px 8px rgba(0, 0, 0, .2);
             visibility: visible;
             // transform-origin: 0 50%;
             // transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
-            transform: translateY(0);
+            transform: translate3d(0,0,0);
             transition-property: opacity, transform, visibility;
             transition-duration: 300ms, 300ms, 0;
             transition-delay: 300ms, 300ms, 0;
-            transition-timing-function: cubic-bezier(.35, .95, .99, 1.19), cubic-bezier(.35, .95, .99, 1.19), linear;
+            transition-timing-function: linear, ease-in-out, linear;
         }
         .btn {
             margin: 0 .5em 1em;
