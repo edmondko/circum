@@ -26,7 +26,7 @@ angular.module('cvApp')
         $scope.navToggle = function(ev) {
             var element = ev.srcElement ? ev.srcElement : ev.target;
             ev.preventDefault();
-            $(element).toggleClass('positive negative').find('.fa').toggleClass('fa-bars fa-close');
+            $(element).parent().toggleClass('rotatedX');
             $('#mainNav').toggleClass('opened');
         };
     });

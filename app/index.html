@@ -25,9 +25,14 @@
 	<!-- Add your site or application content here -->
 	<div class="row" id="wrapper" ng-controller="MainCtrl">
 		<aside class="col-3" id="sidebar">
-			<button class="btn circle raised iconOnly positive animated" id="toggleNav" ng-click="navToggle($event)">
-				<span class="fa fa-bars"></span>
-			</button>
+			<div id="toggleNav" class="rotateElem" ng-click="navToggle($event)">
+				<button class="front btn circle raised iconOnly positive" >
+					<span class="fa fa-bars"></span>
+				</button>
+				<button class="back btn circle raised iconOnly negative" >
+					<span class="fa fa-close"></span>
+				</button>
+			</div>
 			<header id="stickyHeader">
 				<h1 id="heading" ui-sref="about" ui-sref-active="active">
 					<div id="picture">

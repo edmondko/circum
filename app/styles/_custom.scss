@@ -24,6 +24,40 @@ body {
     overflow: hidden;
     background-color: transparent;
 }
+.rotatingElem {
+    transition:  all .6s ease-out;
+    transform-style: preserve-3d;
+    position: relative;
+    will-change: transform;
+    &.rotatedY {
+        transform: rotateY(-180deg);
+    }
+    .front, .back {
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .front {
+        z-index: 2;
+        transform: rotateY(0deg);
+    }
+    .back {
+        transform: rotateY(-180deg);
+    }
+    &.rotatedX {
+        transform: rotateX(-180deg);
+        .front {
+            z-index: 2;
+            transform: rotateX(0deg);
+        }
+        .back {
+            transform: rotateX(-180deg);
+        }
+    }
+}
 #heading {
     font-family: "Lato";
     font-size: 2em;
@@ -47,24 +81,9 @@ body {
         display: inline-block;
         width: 150px;
         height: 150px;
-        transition: .6s;
-        transform-style: preserve-3d;
-        position: relative;
-        .front, .back {
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        .front {
-            z-index: 2;
-            transform: rotateY(0deg);
-        }
-        .back {
-            transform: rotateY(-180deg);
-        }
+
+        @extend .rotatingElem;
+
         img {
             width: 100%;
             height: 100%;
@@ -79,6 +98,7 @@ body {
         transition: all .3s;
     }
 }
+
 #mainNav {
     z-index: 100;
     padding: 1em;
@@ -150,14 +170,12 @@ section .container {
     margin-top: -25px;
     right: 20px;
     z-index: 100;
-    animation-duration: 0.500s;
-    &.positive {
-        animation-name: flipInY;
-        animation-fill-mode: forwards;
-    }
-    &.negative {
-        animation-name: flipInX;
-        animation-fill-mode: forwards;
+    width: 50px;
+    height: 50px;
+
+    @extend .rotatingElem;
+    &.opened {
+        transform: rotateY(-180deg)
     }
 }
 .mainTitle {
@@ -211,22 +229,20 @@ section .container {
         background-color: $sidebar-bg;
         opacity: 0;
         visibility: hidden;
-        transform: perspective(1000px) rotate3d(1, 0, 0, -120deg);
+        transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
         transition-property: opacity, transform, visibility;
         transition-duration: 300ms, 300ms, 0;
         transform-origin: 50% 0;
         transition-delay: 0, 0, 300ms;
         transition-timing-function: cubic-bezier(.35, .95, .99, 1.19), cubic-bezier(.35, .95, .99, 1.19), linear;
         padding-bottom: 0;
+        will-change: opacity, transform, visibility;
         &.opened {
             opacity: 1;
             box-shadow: 0 -3px 8px rgba(0, 0, 0, .2);
             visibility: visible;
             // transform-origin: 0 50%;
-            transform: perspective(1000px) rotate3d(1, 0, 0, 0deg)
-            /* translateY(0) */
-
-            ;
+            transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
             transition-property: opacity, transform, visibility;
             transition-duration: 300ms, 300ms, 0;
             transition-delay: 300ms, 300ms, 0;
