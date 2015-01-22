@@ -183,7 +183,7 @@ section .container {
 }
 
 // Media queries
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (-webkit-max-device-pixel-ratio: 2.0) {
     #heading {
     	padding: 0.5em 0;
         text-align: center;
@@ -209,7 +209,7 @@ section .container {
         width: 100%;
     }
     #main {
-        padding-top: 120px;
+        // padding-top: 120px;
     }
 
     // Responsive Navigation
