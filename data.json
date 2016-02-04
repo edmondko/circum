@@ -108,6 +108,18 @@
             "Apple Products"
         ],
 
+        "projects": [{
+            "title": "Sass patterns",
+            "description": "A micro SASS framework for starters including grid, buttons, forms, animations, etc.",
+            "image": "",
+            "url": "http://edmondko.github.io/ng-sass-patterns"
+        },{
+            "title": "Sass patterns",
+            "description": "A micro SASS framework for starters including grid, buttons, forms, animations, etc.",
+            "image": "",
+            "url": "http://edmondko.github.io/ng-sass-patterns"
+        }],
+
         "strings": {
             "skillsInfo": "My skills are concentrated in writing semantic and pragmatic HTML5/CSS3/JS. I have experience with frameworks, libraries and software development products like:"
         }

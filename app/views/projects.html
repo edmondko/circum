@@ -1,9 +1,19 @@
-<section id="about" class="">
+<section id="projects" class="" ng-controller="MainCtrl">
     <div class="container">
         <div class="row">
             <h1 class="mainTitle">Projects</h1>
             <div class="row">
-
+                <div class="col-full">
+                    <ul class="row">
+                        <li ng-repeat="project in projects" class="col-third">
+                            <h3><a href={{project.url}} target="_blank">{{project.title}}</a></h3>
+                            <p>{{project.description}}</p>
+                            <div class="image">
+                              <img src="{{project.image}}" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

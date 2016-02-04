@@ -17,7 +17,7 @@
                 "title": "Which? Elderly care",
                 "href": "http://which.co.uk/elderly-care"
             }]
-        }
+        },
         {
             "from": "May 2013",
             "to": "February 2015",
@@ -107,6 +107,28 @@
             "Microsoft Products",
             "Apple Products"
         ],
+
+        "projects": [{
+            "title": "Sass patterns",
+            "description": "A micro SASS framework for starters including grid, buttons, forms, animations, etc.",
+            "image": "",
+            "url": "http://edmondko.github.io/ng-sass-patterns"
+        },{
+            "title": "Consumer rights",
+            "description": "A project that we've build from scratch for our clients Which?",
+            "image": "",
+            "url": "http://which.co.uk/consumer-rights/beta"
+        },{
+            "title": "Historypin.org",
+            "description": "A project that I've worked in previous company Avalith Ltd.",
+            "image": "",
+            "url": "http://historypin.org"
+        },{
+            "title": "Internet Buttons",
+            "description": "A project that I've worked in previous company Antipodes Ltd.",
+            "image": "",
+            "url": "http://internetbuttons.org"
+        }],
 
         "strings": {
             "skillsInfo": "My skills are concentrated in writing semantic and pragmatic HTML5/CSS3/JS. I have experience with frameworks, libraries and software development products like:"

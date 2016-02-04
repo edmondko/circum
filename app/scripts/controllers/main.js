@@ -19,6 +19,7 @@ angular.module('cvApp')
             $scope.skills = response.skills;
             $scope.education = response.education;
             $scope.jobs = response.jobs;
+            $scope.projects = response.projects;
             $scope.strings = response.strings;
 
         });
