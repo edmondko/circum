@@ -17,7 +17,7 @@
                 "title": "Which? Elderly care",
                 "href": "http://which.co.uk/elderly-care"
             }]
-        }
+        },
         {
             "from": "May 2013",
             "to": "February 2015",
@@ -114,10 +114,15 @@
             "image": "",
             "url": "http://edmondko.github.io/ng-sass-patterns"
         },{
-            "title": "Sass patterns",
-            "description": "A micro SASS framework for starters including grid, buttons, forms, animations, etc.",
+            "title": "Consumer rights",
+            "description": "A project that we've build from scratch for our clients Which?",
             "image": "",
-            "url": "http://edmondko.github.io/ng-sass-patterns"
+            "url": "http://which.co.uk/consumer-rights/beta"
+        },{
+            "title": "Historypin.org",
+            "description": "A project that I've worked in previous company Avalith Ltd.",
+            "image": "",
+            "url": "http://historypin.org"
         }],
 
         "strings": {
