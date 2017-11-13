@@ -1,5 +1,20 @@
     {
         "jobs": [{
+            "from": "February 2017",
+            "to": "Today",
+            "position": "Front-end Web Developer:",
+            "employer": "Mobisystems",
+            "location": "Sofia, Bulgaria",
+            "business": "A leading provider of mobile productivity and business applications for over 15 years",
+            "about": "I'm part of the WEB team as Front-end develeoper for internal pages, public sites, and lot's of webviews in our native applications.",
+            "links": [{
+                "title": "Mobisystems",
+                "href": "http://mobisystems.com"
+            },{
+                "title": "Which? Birth choice",
+                "href": "http://officesuitenow.com"
+            }]
+        },{
             "from": "February 2015",
             "to": "Today",
             "position": "Front-end Web Developer:",
